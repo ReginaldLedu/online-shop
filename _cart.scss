@@ -1,0 +1,272 @@
+
+@mixin item-description() {
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+color: #888888;	
+width: 276px;
+margin-bottom: 16px;
+}
+
+@mixin item-title(){
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 29px;
+color: #000000;
+margin-bottom: 14px;
+}
+
+@mixin item-price(){
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 20px;
+color: #050505;
+margin-bottom: 15px;
+}
+
+@mixin discount-price(){
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 29px;
+text-decoration-line: line-through;
+color: #888888;
+}
+
+@mixin input(){
+border: none;
+background: transparent;
+
+}
+
+.cart{
+background-image: url("IMG/cartTop.jpg");
+background-position: 0 0;
+background-size: 100% 100%;
+background-repeat: no-repeat;
+height:400px;
+margin-bottom: 64px;
+}
+
+.cart__block{
+display: grid;
+grid-template-columns: 8fr 4fr;
+grid-template-rows: 1fr;
+column-gap: 33px;
+	
+
+.items__header{
+display: flex;
+justify-content: space-between;
+border-bottom: 0.5px solid #CACDD8;
+padding-bottom: 14px;
+}
+
+.cart__form{
+background: #F7F6F6;
+border-radius: 20px;
+display: flex;
+flex-flow:column;
+align-items: center;
+width:379px;
+}
+
+.cart__items{
+display: flex;
+flex-direction: column;
+align-content: flex-start;
+}
+
+.cart__item{
+border-bottom: 0.5px solid #CACDD8;
+padding-bottom: 32px;
+padding-top: 32px;
+display:flex;
+justify-content: flex-start;
+}
+
+.text{
+margin-right: 235px;
+margin-left: 31px;
+}
+
+.item__description{
+	@include item-description();
+}
+
+.item__title{
+	@include item-title();
+}
+
+.item__price{
+	@include item-price();
+}
+
+.q-ty{
+width: 71px;
+height:51px;
+background: #F7F6F6;
+border-radius: 6px;
+border:none;
+display: flex;
+justify-content: center;
+align-items: baseline;
+column-gap: 7px;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input{
+	@include input();
+height:27px;
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 210%;
+}
+
+.quantity{
+width: 15px;
+padding-top: 11px;
+display: flex;
+justify-content: flex-start;
+}
+
+.arrows{
+width: 4px;
+display:flex;
+flex-flow: column;
+justify-content: center;
+align-self: center;
+padding-bottom: 5px;
+	}
+
+.cart__links{
+display: flex;
+align-items: center;
+column-gap: 5px;
+margin-bottom: 50px;
+}
+
+.link-box{
+display:flex;
+column-gap: 30px;
+justify-content: flex-start;
+
+	a{
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 210%;
+	color: #888888;
+	text-decoration: none;
+	}
+	a:hover{
+	text-decoration-line: underline;
+	color: #000000;
+	}
+}
+
+.last{
+border:none;
+}
+.cart__link{
+width: 200px;
+height: 37px;
+border: 1px solid #000000;
+border-radius: 50px;
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+text-align: center;
+color: #000000;
+}
+
+.cart__link:hover{
+	background-color: black;
+	color:white;
+}
+
+.form__title{
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 36px;
+display: flex;
+color: #000000;
+margin-top: 42px;
+margin-bottom: 35px;
+}
+.in{
+width:288px;
+border-bottom: 1px solid #CACDD8;
+display: flex;
+justify-content: flex-start;
+margin-bottom: 44px;
+}
+.name{
+	@include input();
+}
+
+.phone{
+	@include input();
+}
+
+.address{
+	@include input();
+}
+
+.total{
+margin-top: 20px;
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 29px;
+display: flex;
+align-items: center;
+text-align: center;
+color: #000000;
+margin-bottom: 18px;
+}
+
+.order{
+font-family: 'Montserrat';
+display: block;
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+align-items: center;
+text-align: center;
+color: #000000;
+width: 290px;
+height: 41px;
+border: 1px solid #040404;
+border-radius: 20px;
+}
+.order:hover{
+	background-color: black;
+	color: white;
+}
+.order1{
+	transition: transform 0.3s;
+}
+.order1:hover{
+	background-color: transparent;
+	color: white;
+	transform:scale(1.5);
+	border: none;
+}
+}
+	
